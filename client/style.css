@@ -28,6 +28,10 @@ body {
     direction: rtl;
 }
 
+a {
+    text-decoration: none;
+}
+
 .main-layout {
     display: flex;
 }

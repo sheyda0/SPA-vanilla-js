@@ -1,6 +1,7 @@
 import Dashboard from "./pages/Dashboard.js";
 import posts from "./pages/Posts.js";
 import products from "./pages/Products.js";
+import NotFound from "./pages/NotFound.js"
 
 // what view show to user based on route?
 function router() {
@@ -20,7 +21,7 @@ function router() {
     let match = potentialRoutes.find((route) => route.isMatch);
     if (!match) {
         match = {
-            route: { path: '/not-found', view: () => console.log("not-found page") },
+            route: { path: '/not-found', view: NotFound },
             isMatch: true,
         }
     }
