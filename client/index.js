@@ -37,6 +37,14 @@ function navigateTo(url) {
 
 window.addEventListener("popstate", router);
 
+// sidebar toggler
+const sidebarToggler = document.querySelector(".sidebar-toggler");
+const sidebar = document.querySelector(".nav");
+
+sidebarToggler.addEventListener("click", () => {
+    sidebar.classList.toggle("mini-sidebar");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", (e) => {
         if (e.target.matches("[data-link]")) {
